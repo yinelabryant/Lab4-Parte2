@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Portafolio Digital</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function goToNewPage()
+            {
+                var url = document.getElementById('list').value;
+                if(url != 'none') {
+                    window.location = url;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Portafolio Digital</h1>
+        <form>
+            <select name="list" id="list" accesskey="target">
+                <option value='none' selected>Seleccione un estudiante: </option>
+                <option value="PortafolioDigital-YinelaBryant.html">Yinela Bryant</option>
+                <option value="PortafolioDigital.html">José Navarro</option>
+                <option value="PortafolioDigital.html">Donovan García</option>
+            </select>
+            <input type=button value="Go" onclick="goToNewPage()" />
+        </form>
+  
+
+    </body>
+</html>
