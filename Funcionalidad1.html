@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionalidad 1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .contacto{
+            display: flex;
+            flex-direction: column;
+        }
+        .contacto input{
+            margin-bottom: 2vh;
+        }
+        .contacto textarea{
+            width: 405px; 
+            height: 150px; 
+            border-style: solid; 
+            border-width: 1px; 
+            margin-top: 10px;  
+            padding-left: 10px;
+            margin-bottom: 20px; 
+        }           
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Contacto</h1>
+    </header>
+    <section class="main">
+        <form class="contacto" action="">
+            <label for="nombre" class="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required placeholder="Nombre">
+            <label for="email" class="email">Correo Electronico:</label>
+            <input type="email" name="email" id="email" required placeholder="Correo Electronico">
+            <label for="Telefono" class="Telefono">Telefono:</label>
+            <input type="text" name="telefono" id="telefono" required placeholder="Telefono">
+            <label for="asunto" class="asunto">Asunto:</label>
+            <input type="text" name="asunto" id="asunto" required placeholder="Asunto">
+            <label for="mensaje" class="mensaje">Mensaje:</label>
+            <textarea autocomplete="off" type="text" name="mensaje" id="mensaje" required placeholder="Mensaje"></textarea>
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>

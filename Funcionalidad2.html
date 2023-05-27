@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Funcionalidad2</title>
+    <style>
+        body{background-color: beige;; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: rgb(48, 24, 24); padding: 50px;}
+        body h1{text-align: center}
+        body p{text-align: justify;}
+        body img{width: 400px;height: 300px;}
+        * {box-sizing: border-box;}
+       .mySlides {display: none;}
+        img {vertical-align: middle;}
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+            }
+        .active {
+        background-color: #717171;
+        }
+
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Noticias</h1>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://media3.s-nbcnews.com/i/newscms/2019_39/3025091/telemundo-noticias-social_3ce22bb0b4b89f8387927c7d3a205a9c.png" style="width:100%">
+          <div class="text">Telemundo</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://www.elespectador.com/resizer/5ZAGkmWntvQXbiAsSk2MBqHfvjg=/1096x730/filters:quality(60):format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/elespectador/RQY6XFEL6NCUNP6B53N4UD7UAE.jpg" style="width:100%">
+          <div class="text">El espectador</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://pbs.twimg.com/media/EWUGEePVAAIU8M3.jpg" style="width:100%">
+          <div class="text">TVN Noticias</div>
+        </div>
+        
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+
+    <script>
+         function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        let slideIndex = 0;
+        showSlides();
+        
+        </script>
+    <section>
+        <h3>La CSS convocará a una nueva licitación de hemodiálisis, tras cancelarla por desventaja entre empresas.</h3>
+        <center><img src="https://corprensa-la-prensa-prod.cdn.arcpublishing.com/resizer/MLlDC1-iQlzPSUjMYmcTXH4WrXA=/fit-in/1200x1200/smart/cloudfront-us-east-1.images.arcpublishing.com/corprensa/CMQOE7SSX5H3LI4AYECPX4HHPY.jpg"></img>
+        </center>
+        <p>La Caja de Seguro Social (CSS) convocará un nuevo acto público, tras la cancelación el pasado 5 de mayo de la licitación que llevaba adelante por “el servicio de hemodiálisis y suministro de kits de hemodiálisis, así como diseño, construcción y habilitación de unidades de hemodiálisis, según especificaciones técnicas”, que tenia un precio de referencia de $180.8 millones.
+
+            De hecho, en la resolución de cancelación que lleva la firma del director Enrique Lau Cortés, la CSS reconoce que no entregó oportunamente una referencia de experiencia a una empresa que deseaba participar, dejándola en desventaja frente a los otros proponentes, lo que impidió que preparara su propuesta para participar en el acto público realizado el 22 de marzo pasado.</p>
+    </section>
+
+    <section>
+        <h3>Comienzan las labores de extinción del incendio en Cerro Punta: desde un helicóptero lanzan agua.</h3>
+        <center><img src="https://corprensa-la-prensa-prod.cdn.arcpublishing.com/resizer/A3Ta4HEiHnwH5305-tF9poYxdwI=/fit-in/1200x1200/smart/cloudfront-us-east-1.images.arcpublishing.com/corprensa/HSFZJ2WW3JBLPPEJ4YQOZ3P7SA.jpeg"></img>
+        </center>
+        <p>Un helicóptero del Servicio Nacional Aeronaval (Senan) comenzó al mediodía de este jueves 11 de mayo a lanzar agua sobre el fuego que hasta ahora ha arrasado varias hectáreas de bosque en Cerro Punta, distrito de Tierras Altas, Chiriquí.
+
+            El fuego inició a eso de las 10:00 a.m. del miércoles 10 de mayo en la cima del cerro. Pero los brigadistas forestales, voluntarios y miembros del Cuerpo de Bomberos no habían podido atacar las llamas debido a que el área es de difícil acceso.
+            
+            “Para subir se toma como mínimo una hora y cuarenta cinco minutos”, explicó más temprano el alcalde Javier Pittí, de Tierras Altas. </p>
+    </section>
+
+    <section>
+        <h3>Red católica ambientalista rechaza contrato con minera y pide a Asamblea no aprobarlo.</h3>
+        <center><img src="https://corprensa-la-prensa-prod.cdn.arcpublishing.com/resizer/m8HOVNXYUgrk-8EYUVwo1uaXi0g=/fit-in/1200x1200/smart/cloudfront-us-east-1.images.arcpublishing.com/corprensa/PDRH64P7PBA55MEDCLXWX2TO3Y.jpg"></img>
+        </center>
+        <p>En medio de la campaña de divulgación que el Gobierno, a través de sus autoridades, mantiene sobre el contenido del contrato acordado con Minera Panamá, poco a poco sectores empiezan a expresar su postura y cuál debe ser el final de ese documento.
+
+            La más reciente postura fue expresada por la Red Eclesial Ecológica Mesoamericana (Remam), que forma parte de la Pastoral Social- Cáritas.
+            
+            A través de un largo y detallado comunicado, y luego de analizar el documento, Remam pide no avalarlo porque el mismo entra en contradicciones con la legislación ambiental y constitucional del país.</p>
+    </section>
+
+</body>
+</html>
